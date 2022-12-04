@@ -1,6 +1,7 @@
 package pl.edu.wszib.labjackson;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.jdi.request.ClassUnloadRequest;
 
 import java.io.IOException;
 
@@ -9,6 +10,7 @@ public class Application {
         ObjectMapper objectMapper = new ObjectMapper();
         // serializacja
         Person person = new Person("Paweł", "Pustelnik");
+            new Address(city:"Kraków", zipcode)
         String json = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(person);
         System.out.println(json);
 
